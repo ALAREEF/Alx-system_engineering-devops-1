@@ -1,2 +1,1 @@
-#!/bin/bash 
- /tmp/directory
+#!/bin/bash /n/tmp/my_first_directory
