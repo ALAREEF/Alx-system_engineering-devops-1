@@ -1,0 +1,21 @@
+#!/bin/bash
+# Automate School work Assignments
+ls -l
+# variable
+filename="12-newest_files" 
+
+#Header
+echo '#!/bin/bash' > $filename
+#2 program
+echo 'ls -t | head -'  >> $filename
+
+#view contents of filename
+cat $filename
+
+#git add, commit and push to remote
+git add $filename
+git commit -m 'Submit task 12'
+git push
+git status
+
+

@@ -1,0 +1,73 @@
+#!/bin/bash
+# Automate School work Assignments
+ls -l
+#
+#Header
+echo '#!/bin/bash' > 13-unique
+echo 'sort | uniq -u' >> 13-unique
+cat 13-unique
+#
+#Header
+echo '#!/bin/bash' > 14-findthatword
+echo 'grep "root" /etc/passwd' >> 14-findthatword
+cat 14-findthatword
+#
+#Header
+echo '#!/bin/bash' > 15-countthatword
+echo 'grep "bin" /etc/passwd | wc -l' >> 15-countthatword
+cat 15-countthatword
+#
+#Header
+echo '#!/bin/bash' > 16-whatsnext
+echo 'grep -A 3 "root" /etc/passwd' >> 16-whatsnext
+cat 16-whatsnext
+#
+#Header
+echo '#!/bin/bash' > 17-hidethisword
+echo 'grep -v "bin" /etc/passwd' >> 17-hidethisword
+cat 17-hidethisword
+#
+#Header
+echo '#!/bin/bash' > 18-letteronly
+echo 'grep '^[[:alpha:]]' /etc/ssh/sshd_config' >> 18-letteronly
+cat 18-letteronly
+#
+#Header
+echo '#!/bin/bash' > 19-AZ
+echo 'tr "Ac" "Ze"' >> 19-AZ
+cat 19-AZ
+#
+#Header
+echo '#!/bin/bash' > 20-hiago
+echo 'tr -d [Cc]' >> 20-hiago
+cat 20-hiago
+#
+#Header
+echo '#!/bin/bash' > 21-reverse
+echo 'rev' >> 21-reverse
+cat 21-reverse
+#
+#Header
+echo '#!/bin/bash' > 22-users_and_homes
+echo 'cut -d':' -f1,6 /etc/passwd | sort' >> 22-users_and_homes
+cat 22-users_and_homes
+#
+#Header
+echo '#!/bin/bash' > 100-empty_casks
+echo 'find . -empty | rev | cut -d/ -f 1 | rev' >> 100-empty_casks
+cat 100-empty_casks
+#
+#Header
+echo '#!/bin/bash' > 101-gifs
+echo 'find . -name "*.gif" -type f | rev | cut -d "/" -f 1 | cut -d "." -f 2,3 | rev | sort -f -V' >> 101-gifs
+cat 101-gifs
+#
+#Header
+echo '#!/bin/bash' > 103-the_biggest_fan
+echo 'tail -n +2 | cut -f 1 | sort -n | uniq -c | sort -nr | rev | cut -d " " -f 1 | rev | head -n 11' >> 103-the_biggest_fan
+cat 103-the_biggest_fan
+#
+git add .
+git commit -m 'Submit task 13 to 103'
+git push
+git status
