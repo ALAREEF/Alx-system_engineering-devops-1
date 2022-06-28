@@ -1,0 +1,102 @@
+#!/bin/bash
+#Automate School work Assignments
+ls -l
+
+#Readme
+echo '0x03-shell_variables_expansions' > README.md
+echo '13 mandatory + 4 advanced tasks' >> README.md
+cat README.md
+#0
+echo '#!/bin/bash' > 0-alias
+echo 'alias ls='rm *'' >> 0-alias
+chmod 755 0-alias
+
+#1
+echo '#!/bin/bash' > 1-hello_you
+echo 'hello $USER' >> 1-hello_you
+chmod 755 1-hello_you
+
+#2
+echo '#!/bin/bash' > 2-path
+echo 'PATH=$PATH:/action' >> 2-path
+chmod 755 2-path
+
+#3
+echo '#!/bin/bash' > 3-paths
+echo 'echo $PATH | tr ":" "\n" | wc -l' >> 3-paths
+chmod 755 3-paths
+
+#4
+echo '#!/bin/bash' > 4-global_variables
+echo 'printenv' >> 4-global_variables
+chmod 755 4-global_variables
+
+#5
+echo '#!/bin/bash' > 5-local_variables
+echo 'set' >> 5-local_variables
+chmod 755 5-local_variables
+
+#6
+echo '#!/bin/bash' > 6-create_local_variable
+echo 'BEST="School"' >> 6-create_local_variable
+chmod 755 6-create_local_variable
+
+#7
+echo '#!/bin/bash' > 7-create_global_variable
+echo 'export BEST="School"' >> 7-create_global_variable
+chmod 755 7-create_global_variable
+
+#8
+echo '#!/bin/bash' > 8-true_knowledge
+echo 'echo $((128 + $TRUEKNOWLEDGE))' >> 8-true_knowledge
+chmod 755 8-true_knowledge
+
+#9
+echo '#!/bin/bash' > 9-divide_and_rule
+echo 'echo $(($POWER / $DIVIDE))' >> 9-divide_and_rule
+chmod 755 9-divide_and_rule
+
+#10
+echo '#!/bin/bash' > 10-love_exponent_breath
+echo 'echo $(($BREATH**$LOVE))' >> 10-love_exponent_breath
+chmod 755 10-love_exponent_breath
+
+#11
+echo '#!/bin/bash' > 11-binary_to_decimal
+echo 'echo $((2#$BINARY))' >> 11-binary_to_decimal
+chmod 755 11-binary_to_decimal
+
+#12
+echo '#!/bin/bash' > 12-combinations
+echo 'echo {a..z}{a..z} | tr ' ' '\n' | grep --invert-match "oo"' >> 12-combinations
+chmod 755 12-combinations
+
+#13
+echo '#!/bin/bash' > 13-print_float
+echo 'printf "%.2f\n" $NUM' >> 13-print_float
+chmod 755 13-print_float
+
+#14
+echo '#!/bin/bash' > 100-decimal_to_hexadecimal
+echo 'printf "%x\n" $DECIMAL' >> 100-decimal_to_hexadecimal
+chmod 755 100-decimal_to_hexadecimal
+
+#15
+echo '#!/bin/bash' > 101-rot13
+echo 'tr "A-Za-z" "N-ZA-Mn-za-m"' >> 101-rot13
+chmod 755 101-rot13
+
+#16
+echo '#!/bin/bash' > 102-odd
+echo "perl -ne 'print if (\$.%2)'" >> 102-odd
+chmod 755 102-odd
+
+#17
+echo '#!/bin/bash' > 103-water_and_stir
+#echo 'tail -n +2 | cut -f 1 | sort -n | uniq -c | sort -nr | rev | cut -d " " -f 1 | rev | head -n 11' >> 103-water_and_stir
+chmod 755 103-water_and_stir
+
+git add .
+git commit -m 'Submit task 1 to 17'
+git push
+git status
